@@ -1,0 +1,7 @@
+# Terraform Variables - Optimized for Cost
+
+aws_region    = "us-west-1"
+environment   = "prod"
+domain_name   = "ubiqus.me"
+key_name      = "key-pair-ubiqus"
+instance_type = "t3.small" 
