@@ -17,11 +17,11 @@ output "ssh_command" {
 output "domain_records" {
   description = "All domain records created for the application"
   value = {
-    prod_backend      = "${var.domain_name} -> ${aws_eip.k3s_eip.public_ip}"
-    prod_frontend     = "app.${var.domain_name} -> ${aws_eip.k3s_eip.public_ip}"
-    staging_backend   = "staging.${var.domain_name} -> ${aws_eip.k3s_eip.public_ip}"
-    staging_frontend  = "staging-app.${var.domain_name} -> ${aws_eip.k3s_eip.public_ip}"
-    dev_backend       = "dev.${var.domain_name} -> ${aws_eip.k3s_eip.public_ip}"
-    dev_frontend      = "dev-app.${var.domain_name} -> ${aws_eip.k3s_eip.public_ip}"
+    prod_backend     = "${var.domain_name} -> ${aws_eip.k3s_eip.public_ip}"
+    prod_frontend    = "ecard.${var.domain_name} -> ${aws_eip.k3s_eip.public_ip}"
+    staging_backend  = "staging.${var.domain_name} -> ${aws_eip.k3s_eip.public_ip}"
+    staging_frontend = "staging-ecard.${var.domain_name} -> ${aws_eip.k3s_eip.public_ip}"
+    dev_backend      = "dev.${var.domain_name} -> ${aws_eip.k3s_eip.public_ip}"
+    dev_frontend     = "dev-ecard.${var.domain_name} -> ${aws_eip.k3s_eip.public_ip}"
   }
 }

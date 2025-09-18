@@ -212,7 +212,7 @@ resource "aws_route53_record" "prod_backend" {
 # Production frontend domain record (app.ubiqus.me)
 resource "aws_route53_record" "prod_frontend" {
   zone_id = data.aws_route53_zone.main.zone_id
-  name    = "app.${var.domain_name}"
+  name    = "ecard.${var.domain_name}"
   type    = "A"
   ttl     = 300
   records = [aws_eip.k3s_eip.public_ip]
@@ -230,7 +230,7 @@ resource "aws_route53_record" "staging_backend" {
 # Staging frontend domain record (staging-app.ubiqus.me)
 resource "aws_route53_record" "staging_frontend" {
   zone_id = data.aws_route53_zone.main.zone_id
-  name    = "staging-app.${var.domain_name}"
+  name    = "staging-ecard.${var.domain_name}"
   type    = "A"
   ttl     = 300
   records = [aws_eip.k3s_eip.public_ip]
@@ -248,7 +248,7 @@ resource "aws_route53_record" "dev_backend" {
 # Development frontend domain record (dev-app.ubiqus.me)
 resource "aws_route53_record" "dev_frontend" {
   zone_id = data.aws_route53_zone.main.zone_id
-  name    = "dev-app.${var.domain_name}"
+  name    = "dev-ecard.${var.domain_name}"
   type    = "A"
   ttl     = 300
   records = [aws_eip.k3s_eip.public_ip]
