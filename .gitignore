@@ -1,0 +1,183 @@
+# =============================================================================
+# .gitignore para Terraform - Proyecto Ubiqus EC2 Deployment
+# =============================================================================
+
+# Terraform State Files (CRÍTICO - NUNCA versionar)
+# --------------------------------------------------
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+*.tfstate.lock.*
+terraform.tfstate*
+.terraform.tfstate*
+
+# Terraform Lock Files (pueden ser versionados opcionalmente)
+# -----------------------------------------------------------
+# Descomenta la siguiente línea si NO quieres versionar el lock file
+# .terraform.lock.hcl
+
+# Terraform Directories
+# ---------------------
+.terraform/
+.terraform.*
+
+# Terraform Plan Files (contienen información sensible)
+# -----------------------------------------------------
+*.tfplan
+*.tfplan.*
+tfplan*
+
+# Variable Files con información sensible
+# ----------------------------------------
+*.tfvars
+*.tfvars.json
+terraform.tfvars
+terraform.tfvars.json
+secrets.tfvars
+prod.tfvars
+staging.tfvars
+dev.tfvars
+
+# Archivos de override (desarrollo local)
+# ----------------------------------------
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Crash Logs de Terraform
+# ------------------------
+crash.log
+crash.*.log
+
+# Archivos temporales de editores
+# --------------------------------
+# VS Code
+.vscode/
+*.code-workspace
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+
+# Vim
+*.swp
+*.swo
+*~
+.*.swp
+.*.swo
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Sublime Text
+*.sublime-workspace
+*.sublime-project
+
+# Archivos del sistema operativo
+# -------------------------------
+# macOS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msm
+*.msp
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+
+# Logs y archivos temporales
+# --------------------------
+*.log
+*.tmp
+*.temp
+temp/
+tmp/
+logs/
+
+# Archivos de certificados y claves (SEGURIDAD)
+# ---------------------------------------------
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.pfx
+id_rsa*
+id_dsa*
+id_ecdsa*
+id_ed25519*
+
+# Archivos de configuración local y secretos
+# -------------------------------------------
+.env
+.env.local
+.env.*.local
+*.secret
+secrets/
+config.local.*
+
+# Archivos específicos de AWS
+# ----------------------------
+.aws/
+aws-credentials
+credentials
+
+# Archivos de Docker (si están en el repo de infra)
+# --------------------------------------------------
+.dockerignore
+docker-compose.override.yml
+.docker/
+
+# Archivos de backup
+# ------------------
+*.backup
+*.bak
+*~
+.#*
+
+# Archivos de testing
+# --------------------
+test-results/
+coverage/
+.nyc_output/
+
+# Archivos específicos del proyecto Ubiqus
+# -----------------------------------------
+# Cualquier archivo específico que genere tu setup
+ubiqus-config.local.tf
+local-settings.tf
+debug-*.tf
+
+# Módulos descargados (si usas módulos remotos)
+# ---------------------------------------------
+modules/
+.terraform-version
+
+# Archivos de Terragrunt (si lo usas)
+# ------------------------------------
+.terragrunt-cache/
+terragrunt.hcl.backup
